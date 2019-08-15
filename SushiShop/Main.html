@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style/StyleConfig.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Stalinist+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="Script/animations.js"></script>
+    <script src="Script/buyLogick.js"></script>
+    <script src="https://kit.fontawesome.com/3f35bc0190.js"></script>
+    <title>Title</title>
+</head>
+<header>
+    <div class="headNav">
+        <div id="ru" onmouseover="mouseOver(this.id)" onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">
+            RU
+        </div>
+        <div id="eng" onmouseover="mouseOver(this.id)" onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">
+            ENG
+        </div>
+        <div>
+            <select>
+                <option>Санкт-Петербург</option>
+                <option>Москва</option>
+            </select>
+        </div>
+        <div></div>
+        <div style="text-align: right" id="number" onmouseover="mouseOver(this.id)" onmouseout="mouseOut(this.id)"
+             onmousedown="mouseDown(this.id)"><i class="fas fa-phone" style="color: #fd1c44; padding-right: 20px"></i>8-800-555-35-35
+        </div>
+        <div style="text-align: center;" id="employ" onmouseover="mouseOver(this.id)" onmouseout="mouseOut(this.id)"
+             onmousedown="mouseDown(this.id)">Александр <i class="fas fa-user-alt"
+                                                           style="color: #fd1c44; padding-left: 10px"></i></div>
+        <div class="buyButton" id="byeButton" onmouseover="mouseOverButton(this.id)"
+             onmouseout="mouseOutButton(this.id)"
+             onmousedown="mouseDownButton(this.id)" onclick="getBill()">
+            <div class="byuButtonText" id="buyButtonText">0 ₽</div>
+            <div><i class="fas fa-shopping-bag"></i></div>
+        </div>
+    </div>
+    <div class="backGroundImage">
+        <div class="navbar">
+            <div class="navItems">
+                <div><img src="Style/Image/logo.png"></div>
+                <div></div>
+                <div class="navItems-itemPadding" id="main" onmouseover="mouseOver(this.id)"
+                     onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">Главная
+                </div>
+                <div class="navItems-itemPadding" id="menu" onmouseover="mouseOver(this.id)"
+                     onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">Меню
+                </div>
+                <div class="navItems-itemPadding" id="news" onmouseover="mouseOver(this.id)"
+                     onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">Новости
+                </div>
+                <div class="navItems-itemPadding" id="share" onmouseover="mouseOver(this.id)"
+                     onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">Акции
+                </div>
+                <div class="navItems-itemPadding" id="rest" onmouseover="mouseOver(this.id)"
+                     onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">Рестораны
+                </div>
+                <div class="navItems-itemPadding" id="delivery" onmouseover="mouseOver(this.id)"
+                     onmouseout="mouseOut(this.id)" onmousedown="mouseDown(this.id)">География доставки
+                </div>
+            </div>
+            <div class="banner">
+                <div class="banner-text">
+                    <div class="banner-text-c1-r1">Бесплатная доставка при</div>
+                    <div class="banner-text-c1-r2">заказе</div>
+                    <div class="banner-text-c2-r2">от 800 руб.</div>
+                </div>
+                <div class="banner-button-conteiner">
+                    <div class="banner-button" id="bannerButton" onmouseover="mouseOverButton(this.id)"
+                         onmouseout="mouseOutButton(this.id)"
+                         onmousedown="mouseDownButton(this.id)">Перейти к заказу
+                    </div>
+                    <div></div>
+                </div>
+                <div class="banner-image"><img src="Style/Image/Image/sushi_main.png"></div>
+            </div>
+        </div>
+    </div>
+    <div class="navSelectShadow">
+        <div class="navSelectBar">
+            <div class="navSelectBar-item" id="selectOne" onmouseover="mouseOverSelect(this.id)"
+                 onmouseout="mouseOutSelect(this.id)"
+                 onmousedown="mouseDownSelect(this.id)"><img id="selectOneImg" src="Style/Image/icon/002-sushi.png"
+                                                             style="padding: 8px 3px">
+                <div class="navSelectBar-item-name" id="selectOneName">Суши</div>
+            </div>
+            <div class="navSelectBar-item" id="selectTwo" onmouseover="mouseOverSelect(this.id)"
+                 onmouseout="mouseOutSelect(this.id)"
+                 onmousedown="mouseDownSelect(this.id)"><img id="selectTwoImg" src="Style/Image/icon/001-fish.png"
+                                                             style="padding: 5px 2px">
+                <div class="navSelectBar-item-name" id="selectTwoName">Роллы</div>
+            </div>
+            <div class="navSelectBar-item" id="selectThree" onmouseover="mouseOverSelect(this.id)"
+                 onmouseout="mouseOutSelect(this.id)"
+                 onmousedown="mouseDownSelect(this.id)"><img id="selectThreeImg" src="Style/Image/icon/003-sushi-1.png">
+                <div class="navSelectBar-item-name" id="selectThreeName" style="padding-left: 0.2%">Сеты</div>
+            </div>
+            <div class="navSelectBar-item" id="selectFour" onmouseover="mouseOverSelect(this.id)"
+                 onmouseout="mouseOutSelect(this.id)"
+                 onmousedown="mouseDownSelect(this.id)"><img id="selectFourImg" src="Style/Image/icon/004-noodles.png"
+                                                             style="padding: 2px 2px">
+                <div class="navSelectBar-item-name" id="selectFourName">Лапша</div>
+            </div>
+            <div class="navSelectBar-item" id="selectFive" onmouseover="mouseOverSelect(this.id)"
+                 onmouseout="mouseOutSelect(this.id)"
+                 onmousedown="mouseDownSelect(this.id)"><img id="selectFiveImg" src="Style/Image/icon/005-soup.png"
+                                                             style="padding: 4.5px 5.5px">
+                <div class="navSelectBar-item-name" id="selectFiveName" style="padding-left: 1%">Суп</div>
+            </div>
+        </div>
+    </div>
+</header>
+<body class="body">
+<div class="content">
+    <div class="content-group">
+        Суши
+        <img src="Style/Image/icon/doubleUnderLine.png">
+    </div>
+    <div class="content-filter">
+        Фильтр +
+    </div>
+    <div class="contentContainer">
+        <div class="content-itemOne">
+            <div class="contentAttribute-title-weight">50 г.</div>
+            <div class="contentAttribute-title-label">Hit</div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Sushi_Syake_Kunsei.jpg"></div>
+            <div class="contentAttribute-name">Сякэ</div>
+            <div class="contentAttribute-description">с лососем</div>
+            <div class="contentAttribute-Cost">75 Р</div>
+            <div class="contentAttribute-count">
+                <div id="syakeMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="syakeCounter">0</div>
+                <div id="syakePlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemTwo">
+            <div class="contentAttribute-title-weight">65 г.</div>
+            <div class="contentAttribute-title-label" style="background: #ffffff"></div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Sushi_Unagi.jpg"></div>
+            <div class="contentAttribute-name">Унаги</div>
+            <div class="contentAttribute-description">с копчёным угрём</div>
+            <div class="contentAttribute-Cost">110 Р</div>
+            <div class="contentAttribute-count">
+                <div id="unagiMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="unagiCounter">0</div>
+                <div id="unagiPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemThree">
+            <div class="contentAttribute-title-weight">50 г.</div>
+            <div class="contentAttribute-title-label" style="background: #ffffff"></div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Sushi_Maguro.jpg"></div>
+            <div class="contentAttribute-name">Магуро</div>
+            <div class="contentAttribute-description">с тунцом</div>
+            <div class="contentAttribute-Cost">95 Р</div>
+            <div class="contentAttribute-count">
+                <div id="maguroMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="maguroCounter">0</div>
+                <div id="maguroPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemFour">
+            <div class="contentAttribute-title-weight">55 г.</div>
+            <div class="contentAttribute-title-label">Hit</div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Sushi_Ebi.jpg"></div>
+            <div class="contentAttribute-name">Эби</div>
+            <div class="contentAttribute-description">с криветкой</div>
+            <div class="contentAttribute-Cost">85 Р</div>
+            <div class="contentAttribute-count">
+                <div id="ebiMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="ebiCounter">0</div>
+                <div id="ebiPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemFive">
+            <div class="contentAttribute-title-weight">60 г.</div>
+            <div class="contentAttribute-title-label" style="background: #8baf33">Veg</div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Sushi_abokado.jpg"></div>
+            <div class="contentAttribute-name">Абокадо</div>
+            <div class="contentAttribute-description">с авокадо</div>
+            <div class="contentAttribute-Cost">55 Р</div>
+            <div class="contentAttribute-count">
+                <div id="abokadoMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="abokadoCounter">0</div>
+                <div id="abokadoPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="content-group">
+        Роллы
+        <img src="Style/Image/icon/doubleUnderLine.png">
+    </div>
+    <div class="content-filter">
+        Фильтр +
+    </div>
+    <div class="contentContainer">
+        <div class="content-itemOne">
+            <div class="contentAttribute-title-weight">250 г.</div>
+            <div class="contentAttribute-title-label">Hit</div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Roll_Philadelphiya.jpg"></div>
+            <div class="contentAttribute-name">Филладельфия</div>
+            <div class="contentAttribute-description">с лососем</div>
+            <div class="contentAttribute-Cost">435 Р</div>
+            <div class="contentAttribute-count">
+                <div id="philadelphiyaMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="philadelphiyaCounter">0</div>
+                <div id="philadelphiyaPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemTwo">
+            <div class="contentAttribute-title-weight">190 г.</div>
+            <div class="contentAttribute-title-label" style="background: #ffffff"></div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Roll_Syake.jpg"></div>
+            <div class="contentAttribute-name">Сякэ ролл</div>
+            <div class="contentAttribute-description">с лоссосем</div>
+            <div class="contentAttribute-Cost">210 Р</div>
+            <div class="contentAttribute-count">
+                <div id="rollsyakeMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="rollsyakeCounter">0</div>
+                <div id="rollsyakePlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemThree">
+            <div class="contentAttribute-title-weight">190 г.</div>
+            <div class="contentAttribute-title-label" style="background: #ffffff"></div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Roll_Tekka.jpg"></div>
+            <div class="contentAttribute-name">Тэкка ролл</div>
+            <div class="contentAttribute-description">с тунцом</div>
+            <div class="contentAttribute-Cost">245 Р</div>
+            <div class="contentAttribute-count">
+                <div id="rolltekaMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="rolltekaCounter">0</div>
+                <div id="rolltekaPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemFour">
+            <div class="contentAttribute-title-weight">190 г.</div>
+            <div class="contentAttribute-title-label">Hit</div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Roll_Unagi.jpg"></div>
+            <div class="contentAttribute-name">Унаги ролл</div>
+            <div class="contentAttribute-description">с угрём</div>
+            <div class="contentAttribute-Cost">85 Р</div>
+            <div class="contentAttribute-count">
+                <div id="rollunagiMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="rollunagiCounter">0</div>
+                <div id="rollunagiPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+        <div class="content-itemFive">
+            <div class="contentAttribute-title-weight">230 г.</div>
+            <div class="contentAttribute-title-label" style="background: #ffffff"></div>
+            <div class="contentAttribute-image"><img src="Style/Image/Image/Roll_Talat.jpg"></div>
+            <div class="contentAttribute-name">Яки хамачи</div>
+            <div class="contentAttribute-description">с жаренным <br/>желтохвостиком</div>
+            <div class="contentAttribute-Cost">55 Р</div>
+            <div class="contentAttribute-count">
+                <div id="rolltalatMinus" onclick="minusOnClick(this.id)">-</div>
+                <div id="rolltalatCounter">0</div>
+                <div id="rolltalatPlus" onclick="plusOnClick(this.id)">+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<div style="box-shadow: 0 -1px 40px 0px lightgray;">
+    <footer class="footer">
+        <div class="footer-communication">
+            <div><img src="Style/Image/logo.png"></div>
+            <div class="footer-communication-number">
+                <i class="fas fa-phone" style="color: #fd1c44; padding-right: 3%"></i>8-800-555-35-35
+            </div>
+            <div class="footer-sociaLinks">
+                <i class="fab fa-vk" style="color: #fd1c44; padding-right: 3%" id="vk"
+                   onmouseover="mouseOverSocial(this.id)"
+                   onmouseout="mouseOutSocial(this.id)"
+                   onmousedown="mouseOverSocial(this.id)">
+                </i> <i class="fab fa-facebook-f" style="color: #fd1c44; padding-right: 3%" id="fb"
+                        onmouseover="mouseOverSocial(this.id)" onmouseout="mouseOutSocial(this.id)"
+                        onmousedown="mouseOverSocial(this.id)"></i>
+                <i class="fab fa-instagram" style="color: #fd1c44; padding-right: 3%" id="inst"
+                   onmouseover="mouseOverSocial(this.id)" onmouseout="mouseOutSocial(this.id)"
+                   onmousedown="mouseOverSocial(this.id)"></i>
+            </div>
+        </div>
+        <div class="footer-postcription">
+            © 2019 Ресторан японской кухни </br>"Japanito"
+        </div>
+        <div class="footer-linksTable">
+            <div>Рестораны</div>
+            <div>Франшиза</div>
+            <div>Акции</div>
+            <div>Вакансии</div>
+            <div>Новости</div>
+            <div>Оферта</div>
+            <div>Доставка</div>
+            <div>Сотрудничество</div>
+            <div>Аренда</div>
+            <div>Контакты</div>
+        </div>
+        <div class="footer-actions">
+            <div class="footer-search">
+                <form>
+                    <input type="text" placeholder="Поиск по сайту">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="footer-button" id="footerButton" onmouseover="mouseOverButton(this.id)"
+                 onmouseout="mouseOutButton(this.id)"
+                 onmousedown="mouseDownButton(this.id)">Отправить отзыв
+            </div>
+        </div>
+        <div class="footer-appLinks">
+            <div><img src="Style/Image/icon/AppStoreCutted.png"
+                      onmouseover="this.src='Style/Image/icon/AppStoreCuttedOver.png'"
+                      onmouseout="this.src='Style/Image/icon/AppStoreCutted.png'"
+                      onmousedown="this.src = 'Style/Image/icon/AppStoreCuttedDown.png'"></div>
+            <div><img src="Style/Image/icon/GooglePlayCutted.png"
+                      onmouseover="this.src='Style/Image/icon/GooglePlayCuttedOver.png'"
+                      onmouseout="this.src='Style/Image/icon/GooglePlayCutted.png'"
+                      onmousedown="this.src = 'Style/Image/icon/GooglePlayCuttedDown.png'"></div>
+        </div>
+    </footer>
+</div>
+<div class="bill" id="bill">
+    <div class="bill-title">
+        <div class="content-group">
+            Ваш заказ
+            <img src="Style/Image/icon/doubleUnderLine.png">
+        </div>
+        <div class="content-filter" style="align-items: start">
+            <i class="fas fa-times" id="cancelButton" onclick="cancelBill()" onmouseover="mouseOverCancel(this.id)"
+            onmouseout="mouseOutCancel(this.id)" style="cursor: pointer;"></i>
+        </div>
+    </div>
+    <div class="bill-container" id="billContainer">
+
+    </div>
+    <div class="bill-result">
+        <div class="bill-result-text">Итого со скидкой:</div>
+        <div class="bill-result-price" id="billPrice">0 P</div>
+    </div>
+    <div class="bill-button" id="billButton" onmouseover="mouseOverButton(this.id)"
+         onmouseout="mouseOutButton(this.id)"
+         onmousedown="mouseDownButton(this.id)">
+        Оформить заказ
+    </div>
+</div>
+</html>
